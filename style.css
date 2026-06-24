@@ -1,0 +1,154 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:1000px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.converter-card,
+.result-card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    padding:30px;
+    color:white;
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+}
+
+.converter-card h1{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:2rem;
+}
+
+.converter-card h1 i{
+    margin-right:10px;
+    color:#ffd43b;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+}
+
+button{
+    flex:1;
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    font-weight:600;
+}
+
+#convertBtn{
+    background:#00c9a7;
+    color:white;
+}
+
+#resetBtn{
+    background:#ff6b6b;
+    color:white;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.error{
+    color:#ffd4d4;
+    margin-top:5px;
+    font-size:14px;
+}
+
+.result-card{
+    opacity:0;
+    transform:translateY(20px);
+    transition:all 0.5s ease;
+}
+
+.result-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.result-card h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.result-item{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:12px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.result-item:hover{
+    transform:scale(1.03);
+}
+
+.result-item strong{
+    color:#ffd43b;
+}
+
+@media(max-width:768px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .converter-card h1{
+        font-size:1.7rem;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+}
